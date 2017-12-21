@@ -1,0 +1,22 @@
+{
+  "name": "LBPageView",
+  "version": "0.1.0",
+  "summary": "A short description of LBPageView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/j1103765636@iCloud.com/LBPageView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "j1103765636@iCloud.com": "1103765636@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/j1103765636@iCloud.com/LBPageView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LBPageView/Classes/**/*"
+}
