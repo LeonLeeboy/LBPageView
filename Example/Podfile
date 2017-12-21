@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LBPageView_Example' do
+  pod 'LBPageView', :path => '../'
+
+  target 'LBPageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
