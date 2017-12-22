@@ -1,5 +1,5 @@
 PODS:
-  - LBPageView (0.1.0)
+  - LBPageView (1.0.0)
 
 DEPENDENCIES:
   - LBPageView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LBPageView: ddbed8adeb3ac8daa0107799a704fc72d436910a
+  LBPageView: 81982637ddafe6685508a0f966d6823e449d8ed6
 
 PODFILE CHECKSUM: 8d3b5b0f83fb63080ed5aee633d4d3dd33c70c8d
 

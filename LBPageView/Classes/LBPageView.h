@@ -7,11 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+LBPageView.h"
+#import "LBPageViewConst.h"
+
 
 @interface LBPageView : UIView
 
 @property (nonatomic , strong) NSArray *classNameArray;
 
+@property (nonatomic, strong) UIPageViewController *pageViewController;
+
+
 + (instancetype)pageViewWithControllerNamesArray:(NSArray *)classNameArray;
+
+- (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic;
+
+- (void)scrollToViewControllerAtIndex:(NSUInteger)index;
+
+- (void)placeSubViews;
+
+- (void)prepare;
+
+- (void)pageViewAtIndex:(NSUInteger)index;
 
 @end

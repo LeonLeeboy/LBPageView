@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "LBPageView.h"
 
 FOUNDATION_EXPORT double LBPageViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char LBPageViewVersionString[];

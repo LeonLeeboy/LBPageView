@@ -6,17 +6,18 @@
 //  Copyright © 2017年 ivan. All rights reserved.
 //
 
-#define LB_RandomColor      [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0f];
 
 
 #import "LBPageView.h"
 
 @interface LBPageView()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
-@property (nonatomic , strong) UIPageViewController *pageViewController;
 
+@property (assign , nonatomic) NSUInteger currentPageIndex;
 
 @property (nonatomic , strong) NSMutableArray *ViewControllers;
+
+@property (weak , nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -25,7 +26,11 @@
 #pragma mark - lazy
 - (NSMutableArray *)ViewControllers{
     if (_ViewControllers == nil) {
-        _ViewControllers = [NSMutableArray array];
+        _ViewControllers = [NSMutableArray arrayWithCapacity:self.classNameArray.count];
+        for (int i = 0; i < self.classNameArray.count; i ++) {
+            [_ViewControllers addObject:@""];
+        }
+       
     }
     return _ViewControllers;
 }
@@ -38,6 +43,8 @@
 }
 
 - (void)prepare{
+    _currentPageIndex = 0;
+    
     //UI
     
     NSDictionary *option = @{UIPageViewControllerOptionInterPageSpacingKey:@20};
@@ -48,10 +55,56 @@
 }
 
 
+- (UIScrollView *)findScrollView:(UIPageViewController *)pageViewController{
+    __block UIScrollView *scro;
+    [pageViewController.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[UIScrollView class]]) {
+            scro = obj;
+        }
+    }];
+    return scro;
+}
+
 - (void)layoutSubviews{
     [self placeSubViews];
     [super layoutSubviews];
 }
+
+- (void)willMoveToSuperview:(UIView *)newSuperview{
+    [self removeObservers];
+    if (newSuperview) {
+        [self addObservers];
+    }
+}
+
+- (void)addObservers{
+    NSKeyValueObservingOptions options = NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew;
+    self.scrollView = [self findScrollView:_pageViewController];
+    [self.scrollView addObserver:self forKeyPath:LBPageViewContentOffset options:options context:nil];
+}
+
+- (void)removeObservers{
+    [self.superview removeObserver:self forKeyPath:LBPageViewContentOffset];
+    self.scrollView = nil;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:LBPageViewContentOffset]) {
+        [self pageViewDidScrollContentOffset:change];
+    }
+}
+- (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{
+    
+}
+
+- (void)scrollToViewControllerAtIndex:(NSUInteger)index{
+
+    UIViewController *vc = [self controllerAtIndex:index];
+    [self.pageViewController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
+        ;
+    }];
+}
+
 
 - (void)placeSubViews{
     self.pageViewController.view.frame = self.bounds;
@@ -79,7 +132,7 @@
     Class c = NSClassFromString(firstClassName);
     UIViewController *firstViewController = [[c alloc] init];
     if (![self.ViewControllers containsObject:firstViewController]) {
-        [self.ViewControllers addObject:firstViewController];
+        [self.ViewControllers replaceObjectAtIndex:0 withObject:firstViewController];
     }
     firstViewController.view.backgroundColor = LB_RandomColor;
     [self.pageViewController setViewControllers:@[firstViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
@@ -95,29 +148,31 @@
 
 - (UIViewController *)controllerAtIndex:(NSUInteger)index{
     //在viewcontrollers array 中是否有，有就取出来，没有就添加加进去
-    UIViewController *res_ViewController;
-    if (index >= self.classNameArray.count) {
+    if (self.ViewControllers.count <= index) {
         return nil;
     }
-    if (self.ViewControllers.count > index) {
-         res_ViewController = [self.ViewControllers objectAtIndex:index];
-        res_ViewController.view.backgroundColor = LB_RandomColor;
-         return  res_ViewController;
+    UIViewController *ViewController ;
+    if ([[self.ViewControllers objectAtIndex:index] isKindOfClass:[NSString class]]) {
+         ViewController = [[NSClassFromString([self.classNameArray objectAtIndex:index]) alloc] init];
+        [self.ViewControllers replaceObjectAtIndex:index withObject:ViewController];
+        ViewController.view.backgroundColor = LB_RandomColor;
+    }else{
+        ViewController = [self.ViewControllers  objectAtIndex:index];
     }
-    //先添加
-    UIViewController *ViewController = [[NSClassFromString([self.classNameArray objectAtIndex:index]) alloc] init];
-    [self.ViewControllers addObject:ViewController];
-    ViewController.view.backgroundColor = LB_RandomColor;
+   
+    
     return ViewController;
 }
 
-#pragma mark - UIPageViewController
+#pragma mark - UIPageViewController datasource
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController{
      NSUInteger currentIndex = [self indexForViewController:viewController];
     if (viewController == nil ||currentIndex == 0) {
         return nil;
     }
+    
     NSUInteger previousIndex = currentIndex - 1;
+    [self pageViewAtIndex:currentIndex];
     return  [self controllerAtIndex:previousIndex];
 }
 
@@ -129,6 +184,19 @@
     NSUInteger nextIndex = currentIndex+1;
     return [self controllerAtIndex:nextIndex];
 }
+
+- (void)pageViewAtIndex:(NSUInteger)index{}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+    self.currentPageIndex = [self indexForViewController:pendingViewControllers[0]];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
+    if (completed) {
+        [self pageViewAtIndex:_currentPageIndex];
+    }
+}
+
 
 
 
