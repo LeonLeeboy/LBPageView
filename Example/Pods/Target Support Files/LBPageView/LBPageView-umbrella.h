@@ -10,7 +10,10 @@
 #endif
 #endif
 
+#import "LBHeaderPageView.h"
 #import "LBPageView.h"
+#import "LBPageViewConst.h"
+#import "UIView+LBPageView.h"
 
 FOUNDATION_EXPORT double LBPageViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char LBPageViewVersionString[];
