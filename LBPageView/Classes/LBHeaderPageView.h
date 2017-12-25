@@ -40,6 +40,8 @@
 /**
  直接用类方法初始化就行 直接搞定
  */
+@property (strong , nonatomic) UIColor *titleViewBackgroundColor;
+
 + (instancetype)headerPageViewWithClassNamesArray:(NSArray *)classNamesArray titlesArray:(NSArray *)titlesArray;
 
 @end

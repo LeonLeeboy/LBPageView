@@ -18,3 +18,5 @@ UIKIT_EXTERN const CGFloat titlePadding;
 UIKIT_EXTERN const CGFloat titleButtonHeight;
 UIKIT_EXTERN const CGFloat titleViewHeight;
 UIKIT_EXTERN const CGFloat titleButtonWidth;
+
+UIKIT_EXTERN const CGFloat LBHeaderView_LineHeight;

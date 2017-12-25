@@ -62,6 +62,10 @@
 @property (nonatomic , strong) NSMutableArray<LBHeaderButton *> *buttonsArray;
 @property (weak , nonatomic) UIScrollView *scrollView;
 
+@property (weak , nonatomic) UIView *lineView;
+
+@property (weak , nonatomic) LBHeaderButton *selectedHeaderButton;
+
 @end
 
 @implementation LBHeaderView
@@ -83,16 +87,23 @@
 }
 
 - (void)prepare{
+    
+    self.backgroundColor = [UIColor lightGrayColor];
     UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.scrollEnabled = NO;
+    
+    scrollView.alwaysBounceHorizontal = YES;
     [self addSubview:scrollView];
     self.scrollView = scrollView;
     
     
     UIView *line = UIView.new;
     [self addSubview:line];
-    line.backgroundColor = [UIColor whiteColor];
-    line.LB_height = 1.0;
+    line.LB_height = LBHeaderView_LineHeight;
     line.LB_width = titleButtonWidth;
+    line.LB_x = titlePadding;
+    line.backgroundColor = [UIColor whiteColor];
+    self.lineView = line;
 }
 
 - (void)layoutSubviews{
@@ -102,21 +113,23 @@
 }
 
 - (void)placeSubViews{
-    self.scrollView.frame = self.bounds;
-    self.scrollView.contentSize = CGSizeMake(titlePadding * (self.buttonsArray.count + 1) + titleButtonWidth * self.buttonsArray.count, self.LB_height);
-   
+    self.scrollView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - LBHeaderView_LineHeight);
+    self.scrollView.contentSize = CGSizeMake(titlePadding * (self.buttonsArray.count + 1) + titleButtonWidth * self.buttonsArray.count, self.scrollView.frame.size.height);
+    self.lineView.LB_y = self.scrollView.frame.size.height;
     [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
          obj.LB_x = (obj.LB_width + titlePadding) * idx + titlePadding;
     }];
     
-    if ((self.buttonsArray.lastObject.LB_x + self.buttonsArray.lastObject.LB_width) <= self.scrollView.LB_width){
+    if ((self.buttonsArray.lastObject.LB_x + self.buttonsArray.lastObject.LB_width + titlePadding) <= self.scrollView.LB_width){
         CGFloat dividedWidth = (self.scrollView.LB_width - (self.buttonsArray.count + 1)*titlePadding) / self.buttonsArray.count;
         
         [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.LB_width = dividedWidth;
+            if (obj.isSelected) {
+                self.lineView.LB_width = obj.LB_width;
+            }
         }];
     }
-    
     
 }
 
@@ -140,6 +153,7 @@
         [button addTarget:self action:@selector(headerViewDidClickAtIndex:) forControlEvents:UIControlEventTouchUpInside];
         if (i == 0) {
             button.selected = YES;
+            self.selectedHeaderButton = button;
         }
         [self.buttonsArray addObject:button];
         [self.scrollView addSubview:button];
@@ -160,13 +174,72 @@
 }
 
 - (void)refreshWithSelectedIndex:(NSUInteger)index{
-  
+     NSUInteger count = self.buttonsArray.count;
+    CGSize contentSize = self.scrollView.contentSize;
     [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.selected = NO;
         if (idx == index) {
             obj.selected = YES;
         }
     }];
+    if (index == 0 ) {
+        [self.scrollView scrollRectToVisible:CGRectMake(0, 0, self.scrollView.LB_width, self.scrollView.LB_height) animated:NO];
+    }
+    if (index == count -1) {
+        [self.scrollView scrollRectToVisible:CGRectMake(contentSize.width - self.scrollView.LB_width, 0, self.scrollView.LB_width, self.scrollView.LB_height) animated:NO];
+    }
+  
+   
+    [self dealScrollElementsWithIndex:index];
+}
+
+- (void)dealScrollElementsWithIndex:(NSUInteger)index{
+    
+    BOOL isNeedDeal = NO;
+    if ((self.buttonsArray.lastObject.LB_x + self.buttonsArray.lastObject.LB_width + titlePadding) <= self.scrollView.LB_width) {
+        isNeedDeal = NO;
+        LBHeaderButton *obj = [self.buttonsArray objectAtIndex:index];
+        self.lineView.LB_x = obj.LB_x;
+    }else{
+        isNeedDeal = YES;
+    }
+    if (!isNeedDeal) {
+        return;
+    }
+    //找出可以处理button 和 需要处理的按钮
+    __block NSMutableArray *needDealsButton = [NSMutableArray array];
+    __block LBHeaderButton *headerButton;
+    [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ((self.scrollView.center.x < obj.center.x  && (self.scrollView.contentSize.width - obj.center.x) > self.scrollView.LB_width/2.0)&&index == idx) {
+            [needDealsButton addObject:obj];
+            headerButton = obj;
+        }
+    }];
+    self.selectedHeaderButton = headerButton;
+    if (headerButton==nil) {
+        LBHeaderButton *obj = [self.buttonsArray objectAtIndex:index];
+        //to fix bug
+        if ((obj.LB_x + obj.LB_width) > (self.scrollView.contentOffset.x + self.scrollView.LB_width)) {
+             [self.scrollView scrollRectToVisible:CGRectMake(self.scrollView.contentSize.width - self.scrollView.LB_width, 0, self.scrollView.LB_width, self.scrollView.LB_height) animated:NO];
+        }
+        
+        if (self.scrollView.contentOffset.x >= obj.LB_x ) {
+             [self.scrollView scrollRectToVisible:CGRectMake(0, 0, self.scrollView.LB_width, self.scrollView.LB_height) animated:NO];
+        }
+        CGFloat x = obj.LB_x - self.scrollView.contentOffset.x;
+        [UIView animateWithDuration:0.38 animations:^{
+            self.lineView.LB_x = x;
+        }];
+        return;
+    }
+    CGRect f = CGRectMake(headerButton.center.x - self.scrollView.LB_width / 2.0, self.scrollView.LB_y, self.scrollView.LB_width, self.scrollView.LB_height);
+    [self.scrollView scrollRectToVisible:f animated:YES];
+    [UIView animateWithDuration:0.38 animations:^{
+        [UIView animateWithDuration:0.38 animations:^{
+            self.lineView.LB_x = self.scrollView.center.x - headerButton.LB_width / 2.0;
+        }];
+    }];
+    
 }
 
 @end
@@ -190,13 +263,7 @@
 @implementation LBHeaderPageView
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
 
 + (instancetype)headerPageViewWithClassNamesArray:(NSArray *)classNamesArray titlesArray:(NSArray *)titlesArray{
     LBHeaderPageView *headerPageView = [[self alloc] init];
@@ -233,15 +300,21 @@
    
     
     self.pageViewController.view.frame = CGRectMake(self.titleView.frame.origin.x, self.titleView.frame.origin.y + self.titleView.frame.size.height, self.titleView.frame.size.width, self.frame.size.height - self.titleView.frame.size.height);
+    
+    
 }
 
+//继承自父View
 - (void)pageViewAtIndex:(NSUInteger)index{
     [self.titleView refreshWithSelectedIndex:index];
+
 }
 
 - (void)headerView:(LBHeaderView *)headerView DidClickAtIndex:(NSUInteger)index{
     [self scrollToViewControllerAtIndex:index];
 }
+
+
 
 
 @end

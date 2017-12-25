@@ -1,5 +1,28 @@
 # LBPageView
 
+## 辛辛苦苦点进来，～留个star吧～
+
+ ![](http://g.recordit.co/vB3pZqritp.gif)
+
+- demo
+`it support autoLayout , code etc.`
+
+```
+NSArray *pageNamesArray = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
+LBHeaderPageView *headerPageView = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray titlesArray:@[@"首页",@"娱乐",@"体育",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"]];
+[self.view addSubview:headerPageView];
+[headerPageView mas_makeConstraints:^(MASConstraintMaker *make) {
+make.left.mas_equalTo(10);
+make.right.mas_equalTo(-10);
+make.top.mas_equalTo(100);
+make.bottom.mas_equalTo(-50);
+}];
+
+
+```
+
+
+
 [![CI Status](http://img.shields.io/travis/j1103765636@iCloud.com/LBPageView.svg?style=flat)](https://travis-ci.org/j1103765636@iCloud.com/LBPageView)
 [![Version](https://img.shields.io/cocoapods/v/LBPageView.svg?style=flat)](http://cocoapods.org/pods/LBPageView)
 [![License](https://img.shields.io/cocoapods/l/LBPageView.svg?style=flat)](http://cocoapods.org/pods/LBPageView)

@@ -134,7 +134,7 @@
     if (![self.ViewControllers containsObject:firstViewController]) {
         [self.ViewControllers replaceObjectAtIndex:0 withObject:firstViewController];
     }
-    firstViewController.view.backgroundColor = LB_RandomColor;
+    firstViewController.view.backgroundColor = [UIColor lightGrayColor];
     [self.pageViewController setViewControllers:@[firstViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
         ;
     }];
@@ -155,7 +155,7 @@
     if ([[self.ViewControllers objectAtIndex:index] isKindOfClass:[NSString class]]) {
          ViewController = [[NSClassFromString([self.classNameArray objectAtIndex:index]) alloc] init];
         [self.ViewControllers replaceObjectAtIndex:index withObject:ViewController];
-        ViewController.view.backgroundColor = LB_RandomColor;
+        ViewController.view.backgroundColor = [UIColor lightGrayColor];
     }else{
         ViewController = [self.ViewControllers  objectAtIndex:index];
     }
