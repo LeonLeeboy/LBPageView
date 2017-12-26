@@ -8,6 +8,7 @@
 `it support autoLayout , code etc.`
 
 ```
+//auto layout and frame code both of them are ok!
 NSArray *pageNamesArray = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
 LBHeaderPageView *headerPageView = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray titlesArray:@[@"首页",@"娱乐",@"体育",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"]];
 [self.view addSubview:headerPageView];
@@ -18,6 +19,16 @@ make.top.mas_equalTo(100);
 make.bottom.mas_equalTo(-50);
 }];
 
+NSArray *pageNamesArray = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
+LBHeaderPageView *headerPageView = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray titlesArray:@[@"首页",@"娱乐",@"体育",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"]];
+[self.view addSubview:headerPageView];
+headerPageView.frame = CGRectMake(0, 74, [UIScreen mainScreen].bounds.size.width , 200);
+
+NSArray *pageNamesArray2 = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
+LBHeaderPageView *headerPageView2 = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"]];
+headerPageView2.lineWidthIsNeedAutoChange = YES;
+[self.view addSubview:headerPageView2];
+headerPageView2.frame = CGRectMake(0, headerPageView.LB_y + headerPageView.LB_height + 10, [UIScreen mainScreen].bounds.size.width , 100);
 
 ```
 
