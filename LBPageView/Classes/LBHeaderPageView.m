@@ -98,7 +98,7 @@
     
     
     UIView *line = UIView.new;
-    [self addSubview:line];
+    [self.scrollView addSubview:line];
     line.LB_height = LBHeaderView_LineHeight;
     line.LB_width = titleButtonWidth;
     line.LB_x = titlePadding;
@@ -113,9 +113,9 @@
 }
 
 - (void)placeSubViews{
-    self.scrollView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - LBHeaderView_LineHeight);
+    self.scrollView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     self.scrollView.contentSize = CGSizeMake(titlePadding * (self.buttonsArray.count + 1) + titleButtonWidth * self.buttonsArray.count, self.scrollView.frame.size.height);
-    self.lineView.LB_y = self.scrollView.frame.size.height;
+    self.lineView.LB_y = self.scrollView.frame.size.height - LBHeaderView_LineHeight;
     [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
          obj.LB_x = (obj.LB_width + titlePadding) * idx + titlePadding;
     }];
@@ -196,10 +196,12 @@
 - (void)dealScrollElementsWithIndex:(NSUInteger)index{
     
     BOOL isNeedDeal = NO;
+    LBHeaderButton *obj = [self.buttonsArray objectAtIndex:index];
+    [UIView animateWithDuration:0.38 animations:^{
+        self.lineView.LB_x = obj.LB_x;
+    }];
     if ((self.buttonsArray.lastObject.LB_x + self.buttonsArray.lastObject.LB_width + titlePadding) <= self.scrollView.LB_width) {
         isNeedDeal = NO;
-        LBHeaderButton *obj = [self.buttonsArray objectAtIndex:index];
-        self.lineView.LB_x = obj.LB_x;
     }else{
         isNeedDeal = YES;
     }
@@ -226,20 +228,11 @@
         if (self.scrollView.contentOffset.x >= obj.LB_x ) {
              [self.scrollView scrollRectToVisible:CGRectMake(0, 0, self.scrollView.LB_width, self.scrollView.LB_height) animated:NO];
         }
-        CGFloat x = obj.LB_x - self.scrollView.contentOffset.x;
-        [UIView animateWithDuration:0.38 animations:^{
-            self.lineView.LB_x = x;
-        }];
+
         return;
     }
     CGRect f = CGRectMake(headerButton.center.x - self.scrollView.LB_width / 2.0, self.scrollView.LB_y, self.scrollView.LB_width, self.scrollView.LB_height);
     [self.scrollView scrollRectToVisible:f animated:YES];
-    [UIView animateWithDuration:0.38 animations:^{
-        [UIView animateWithDuration:0.38 animations:^{
-            self.lineView.LB_x = self.scrollView.center.x - headerButton.LB_width / 2.0;
-        }];
-    }];
-    
 }
 
 @end
@@ -315,7 +308,10 @@
 }
 
 
-
+- (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{
+    NSLog(@"------------%@-----",infoDic);
+//    NSDictionary *oldInfo = infoDic[@"new"];
+}
 
 @end
 

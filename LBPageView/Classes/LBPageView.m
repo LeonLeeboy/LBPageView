@@ -98,7 +98,6 @@
 }
 
 - (void)scrollToViewControllerAtIndex:(NSUInteger)index{
-
     UIViewController *vc = [self controllerAtIndex:index];
     [self.pageViewController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
         ;
