@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LBPageView'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'slide view'
 
 

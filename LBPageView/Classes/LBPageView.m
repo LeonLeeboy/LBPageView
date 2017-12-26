@@ -90,7 +90,9 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:LBPageViewContentOffset]) {
-        [self pageViewDidScrollContentOffset:change];
+        if([self findScrollView:_pageViewController].isDragging){
+            [self pageViewDidScrollContentOffset:change];
+        }
     }
 }
 - (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{

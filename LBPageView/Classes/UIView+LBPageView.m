@@ -69,5 +69,15 @@
     self.frame = frame;
 }
 
+- (CGFloat)LB_right{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)setLB_right:(CGFloat)LB_right{
+    CGRect frame = self.frame;
+    frame.origin.x = LB_right - frame.size.width;
+    self.frame = frame;
+}
+
 
 @end

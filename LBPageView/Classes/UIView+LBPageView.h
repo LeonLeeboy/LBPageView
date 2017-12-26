@@ -22,4 +22,5 @@
 
 @property (assign , nonatomic) CGPoint LB_origin;
 
+@property (assign , nonatomic) CGFloat LB_right;
 @end

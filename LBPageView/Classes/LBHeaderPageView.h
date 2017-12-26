@@ -37,6 +37,8 @@
 
 @interface LBHeaderPageView : LBPageView
 
+@property (assign , nonatomic) BOOL lineWidthIsNeedAutoChange;
+
 /**
  直接用类方法初始化就行 直接搞定
  */
