@@ -11,6 +11,7 @@
 #endif
 
 #import "LBHeaderPageView.h"
+#import "LBNavigationPageView.h"
 #import "LBPageView.h"
 #import "LBPageViewConst.h"
 #import "UIView+LBPageView.h"
