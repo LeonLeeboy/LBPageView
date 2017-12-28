@@ -84,8 +84,7 @@
 }
 
 - (void)removeObservers{
-    [self.superview removeObserver:self forKeyPath:LBPageViewContentOffset];
-    self.scrollView = nil;
+    [self.scrollView removeObserver:self forKeyPath:LBPageViewContentOffset];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
