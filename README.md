@@ -2,7 +2,7 @@
 
 ## 辛辛苦苦点进来，～留个star吧～
 
- ![](http://g.recordit.co/GcTgEDfUam.gif)
+ ![](http://g.recordit.co/StyfruEvpV.gif)
 
 - demo
 `it support autoLayout , code etc.`
