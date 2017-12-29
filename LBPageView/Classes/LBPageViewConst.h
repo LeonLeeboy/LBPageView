@@ -20,3 +20,7 @@ UIKIT_EXTERN const CGFloat titleViewHeight;
 UIKIT_EXTERN const CGFloat titleButtonWidth;
 
 UIKIT_EXTERN const CGFloat LBHeaderView_LineHeight;
+
+UIKIT_EXTERN const CGFloat navigationTitleViewWidth;
+UIKIT_EXTERN const CGFloat navigationTitleViewHeight;
+UIKIT_EXTERN const CGFloat navigationTitleButtonHeight;

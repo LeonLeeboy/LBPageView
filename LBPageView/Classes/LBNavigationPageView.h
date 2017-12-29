@@ -9,4 +9,8 @@
 
 @interface LBNavigationPageView : LBPageView
 
+@property (assign , nonatomic) BOOL lineWidthIsNeedAutoChange;
+
++ (instancetype)pageViewWithClassNamesArray:(NSArray *)classNamesArray titlesArray:(NSArray *)titlesArray ViewController:(UIViewController *)vc;
+
 @end

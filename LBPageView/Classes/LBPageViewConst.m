@@ -14,3 +14,7 @@ const CGFloat titleButtonHeight = 30;
 const CGFloat titleViewHeight = 30 + 2 * 5;
 const CGFloat titleButtonWidth = 40;
 const CGFloat LBHeaderView_LineHeight = 2;
+
+const CGFloat navigationTitleViewWidth = 200;
+const CGFloat navigationTitleViewHeight = 34;
+const CGFloat navigationTitleButtonHeight = 25;

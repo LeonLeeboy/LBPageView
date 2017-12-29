@@ -25,9 +25,23 @@
 
 @interface LBHeaderView : UIView
 
+@property (nonatomic , strong) NSArray *titlesArray;
+
+@property (weak , nonatomic,readonly) UIScrollView *scrollView;//无需操作
+
+@property (weak , nonatomic,readonly) LBHeaderButton *selectedHeaderButton;
+
+@property (weak , nonatomic) UIView *lineView; //无需操作
+
+@property (assign , nonatomic,readonly) NSUInteger currentIndex;
+
+@property (nonatomic , strong , readonly) NSMutableArray<LBHeaderButton *> *buttonsArray;
+
+@property (assign , nonatomic) BOOL isNeedLineAnnimate;//to fix a little bug
+
 @property (weak , nonatomic) id <LBHeaderViewDelegate> delegate;
 
-+ (instancetype)headerViewWithTitlesArray:(NSArray *)titlesArray;
++ (instancetype)headerViewWithTitlesArray:(NSArray *)titlesArray withNavigation:(BOOL)flag;
 
 - (void)refreshWithSelectedIndex:(NSUInteger)index;
 
