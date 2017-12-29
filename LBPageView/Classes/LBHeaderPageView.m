@@ -69,7 +69,7 @@
 @property (assign , nonatomic,readwrite) NSUInteger currentIndex;
 
 
-@property (assign , nonatomic) CGFloat dividedWidth;
+
 
 @property (assign , nonatomic) BOOL isNavigation;
 
@@ -121,23 +121,27 @@
 
 - (void)placeSubViews{
     self.scrollView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    self.scrollView.contentSize = CGSizeMake(titlePadding * (self.buttonsArray.count + 1) + self.dividedWidth * self.buttonsArray.count, self.scrollView.frame.size.height);
     self.lineView.LB_y = self.scrollView.frame.size.height - LBHeaderView_LineHeight;
+    
+    
+    [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.LB_x = (obj.LB_width + titlePadding) * idx + titlePadding;
+    }];
     
     if ((self.buttonsArray.lastObject.LB_x + self.buttonsArray.lastObject.LB_width + titlePadding) <= self.scrollView.LB_width){
         CGFloat dividedWidth = (self.scrollView.LB_width - (self.buttonsArray.count + 1)*titlePadding) / self.buttonsArray.count;
         self.dividedWidth = dividedWidth;
         [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.LB_width = dividedWidth;
+            obj.LB_x = (obj.LB_width + titlePadding) * idx + titlePadding;
             if (obj.isSelected) {
                 self.lineView.LB_width = dividedWidth;
             }
         }];
     }
-    self.scrollView.contentSize = CGSizeMake(titlePadding * (self.buttonsArray.count + 1) + self.dividedWidth * self.buttonsArray.count, self.scrollView.frame.size.height);
     
-    [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.LB_x = (obj.LB_width + titlePadding) * idx + titlePadding;
-    }];
+   
     
 }
 
@@ -189,6 +193,7 @@
     self.currentIndex = index;
     NSUInteger count = self.buttonsArray.count;
     CGSize contentSize = self.scrollView.contentSize;
+    self.selectedHeaderButton = [self.buttonsArray objectAtIndex:index];
     [self.buttonsArray enumerateObjectsUsingBlock:^(LBHeaderButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.selected = NO;
         if (idx == index) {
@@ -236,7 +241,9 @@
             headerButton = obj;
         }
     }];
-    self.selectedHeaderButton = headerButton;
+    if (headerButton) {
+         self.selectedHeaderButton = headerButton;
+    }
     if (headerButton==nil) {
         LBHeaderButton *obj = [self.buttonsArray objectAtIndex:index];
         //to fix bug
@@ -270,8 +277,6 @@
 
 @property (nonatomic , assign) CGFloat s; // 滚动了多少距离
 
-@property (nonatomic , assign)BOOL isFinished;
-
 @end
 
 @implementation LBHeaderPageView
@@ -298,7 +303,6 @@
     [super prepare];
     //data
     _s = 0;
-    _isFinished = NO;
     _lineWidthIsNeedAutoChange = NO;
     //UI
     
@@ -338,7 +342,7 @@
 
 //继承自父View
 - (void)pageViewAtIndex:(NSUInteger)index{
-    self.isFinished = YES;
+//    self.isFinished = YES;
     if (self.lineWidthIsNeedAutoChange) {
         self.titleView.isNeedLineAnnimate = NO;
     }else{
@@ -349,42 +353,42 @@
 }
 
 - (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{
-    
+    [super pageViewDidScrollContentOffset:infoDic];
     if (!self.lineWidthIsNeedAutoChange) {
         return;
     }
-    [super pageViewDidScrollContentOffset:infoDic];
-    LBHeaderButton *obj = self.titleView.selectedHeaderButton;
-    CGFloat w = self.titleView.scrollView.LB_width;
+    
+    CGFloat w = self.LB_width;
     CGFloat c = self.titleView.dividedWidth  + titlePadding;
     NSValue *newdic = infoDic[@"new"];
     NSValue *olddic = infoDic[@"old"];
     CGPoint newPoint = [newdic CGPointValue];
     CGPoint oldPoint = [olddic CGPointValue];
-
-    if (_isFinished) {
-        self.s = 0;
-        _isFinished = NO;
-        return;
-    }
-    if (newPoint.x == oldPoint.x||newPoint.x * 2 ==  oldPoint.x) {
-        self.s = 0;
-        return;
-    }
     self.s += newPoint.x - oldPoint.x;
-    CGFloat objW = c / w * self.s;
+    CGFloat k = self.LB_width / self.titleView.LB_width;
+    CGFloat objW = c / w * self.s * (1.0/k);
     if (self.s > 0) {
         self.titleView.lineView.LB_width = self.titleView.dividedWidth + objW;
     }
-    
+
     if (self.s < 0) {
         self.titleView.lineView.LB_width =self.titleView.dividedWidth- objW;
-        self.titleView.lineView.LB_right = [self.titleView.buttonsArray objectAtIndex:self.titleView.currentIndex].LB_right;
+        self.titleView.lineView.LB_x = [self.titleView.buttonsArray objectAtIndex:self.titleView.currentIndex].LB_x + objW;
     }
    
     
-    NSLog(@"------------%@-----",infoDic);
+  
     
+}
+
+- (void)pageViewDidEndDragging{
+   
+}
+
+- (void)pageViewDidEndDecelerate{
+    self.s = 0;
+    self.titleView.lineView.LB_width = self.titleView.dividedWidth;
+    self.titleView.lineView.LB_x = self.titleView.selectedHeaderButton.LB_x;
 }
 
 @end

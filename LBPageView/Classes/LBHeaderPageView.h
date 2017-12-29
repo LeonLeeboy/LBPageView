@@ -37,6 +37,8 @@
 
 @property (nonatomic , strong , readonly) NSMutableArray<LBHeaderButton *> *buttonsArray;
 
+@property (assign , nonatomic) CGFloat dividedWidth;
+
 @property (assign , nonatomic) BOOL isNeedLineAnnimate;//to fix a little bug
 
 @property (weak , nonatomic) id <LBHeaderViewDelegate> delegate;

@@ -16,13 +16,12 @@
 
 @property (weak , nonatomic) UIViewController *viewontroller;
 
-@property (nonatomic , assign)BOOL isFinished;
 
 @property (nonatomic , assign) CGFloat s; // 滚动了多少距离
 
 @end
 
-@implementation LBNavigationPageView
+@implementation     LBNavigationPageView
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -36,7 +35,6 @@
     [super prepare];
    //data
     _s = 0;
-    _isFinished = NO;
     _lineWidthIsNeedAutoChange = NO;
     //UI
     LBHeaderView *titleView = [[LBHeaderView alloc] init];;
@@ -86,46 +84,36 @@
 
 - (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{
     
+    [super pageViewDidScrollContentOffset:infoDic];
     if (!self.lineWidthIsNeedAutoChange) {
         return;
     }
-    [super pageViewDidScrollContentOffset:infoDic];
-    LBHeaderButton *obj = self.titleView.selectedHeaderButton;
-    CGFloat w = self.titleView.scrollView.LB_width;
-    CGFloat c = obj.LB_width  + titlePadding;
+    
+    CGFloat w = self.LB_width;
+    CGFloat c = self.titleView.dividedWidth  + titlePadding;
     NSValue *newdic = infoDic[@"new"];
     NSValue *olddic = infoDic[@"old"];
     CGPoint newPoint = [newdic CGPointValue];
     CGPoint oldPoint = [olddic CGPointValue];
-    
-    if (_isFinished) {
-        self.s = 0;
-        _isFinished = NO;
-        return;
-    }
-    if (newPoint.x == oldPoint.x||newPoint.x * 2 ==  oldPoint.x) {
-        self.s = 0;
-        return;
-    }
     self.s += newPoint.x - oldPoint.x;
-    CGFloat objW = c / w * self.s;
+    CGFloat k = self.LB_width / self.titleView.LB_width;
+    CGFloat objW = c / w * self.s * (1.0/k);
     if (self.s > 0) {
-        self.titleView.lineView.LB_width = obj.LB_width + objW;
+        self.titleView.lineView.LB_width = self.titleView.dividedWidth + objW;
     }
     
     if (self.s < 0) {
-        self.titleView.lineView.LB_width =obj.LB_width- objW;
-        self.titleView.lineView.LB_right = [self.titleView.buttonsArray objectAtIndex:self.titleView.currentIndex].LB_right;
+        self.titleView.lineView.LB_width =self.titleView.dividedWidth- objW;
+        self.titleView.lineView.LB_x = [self.titleView.buttonsArray objectAtIndex:self.titleView.currentIndex].LB_x + objW;
     }
     
     
-    NSLog(@"------------%@-----",infoDic);
     
 }
 
 //继承自父View
 - (void)pageViewAtIndex:(NSUInteger)index{
-    self.isFinished = YES;
+
     if (self.lineWidthIsNeedAutoChange) {
         self.titleView.isNeedLineAnnimate = NO;
     }else{
@@ -135,6 +123,12 @@
     
 }
 
+
+- (void)pageViewDidEndDecelerate{
+    self.s = 0;
+    self.titleView.lineView.LB_width = self.titleView.dividedWidth;
+    self.titleView.lineView.LB_x = self.titleView.selectedHeaderButton.LB_x;
+}
 
 
 @end

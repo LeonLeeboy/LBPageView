@@ -21,22 +21,31 @@
 {
     [super viewDidLoad];
    
-//
-//    NSArray *pageNamesArray = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
-//    LBHeaderPageView *headerPageView = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray titlesArray:@[@"首页",@"娱乐",@"体育",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"]];
-//    [self.view addSubview:headerPageView];
-//    headerPageView.frame = CGRectMake(0, 74, [UIScreen mainScreen].bounds.size.width , 200);
 
-    NSArray *pageNamesArray2 = @[@"UIViewController",@"UIViewController",@"UIViewController"];
-    LBHeaderPageView *headerPageView2 = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育"]];
+
+    NSArray *pageNamesArray2 = @[@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController",@"UIViewController"];
+    LBHeaderPageView *headerPageView2 = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育"]];
     headerPageView2.lineWidthIsNeedAutoChange = YES;
     [self.view addSubview:headerPageView2];
     headerPageView2.frame = CGRectMake(0, 84, [UIScreen mainScreen].bounds.size.width , 200);
 
-    LBNavigationPageView *navigationPageView = [LBNavigationPageView pageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育"] ViewController:self];
-    navigationPageView.lineWidthIsNeedAutoChange = YES;
+    LBNavigationPageView *navigationPageView = [LBNavigationPageView pageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育",@"首页",@"娱乐",@"体育"] ViewController:self];
+    navigationPageView.lineWidthIsNeedAutoChange = NO;
     [self.view addSubview:navigationPageView];
-    navigationPageView.frame = CGRectMake(0,300, [UIScreen mainScreen].bounds.size.width , 300);
+    navigationPageView.frame = CGRectMake(0,300, [UIScreen mainScreen].bounds.size.width , 100);
+    
+    
+
+//    NSArray *pageNamesArray2 = @[@"UIViewController",@"UIViewController",@"UIViewController"];
+//    LBHeaderPageView *headerPageView2 = [LBHeaderPageView headerPageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育"]];
+//    headerPageView2.lineWidthIsNeedAutoChange = YES;
+//    [self.view addSubview:headerPageView2];
+//    headerPageView2.frame = CGRectMake(0, 84, [UIScreen mainScreen].bounds.size.width , 200);
+//
+//    LBNavigationPageView *navigationPageView = [LBNavigationPageView pageViewWithClassNamesArray:pageNamesArray2 titlesArray:@[@"首页",@"娱乐",@"体育"] ViewController:self];
+//    navigationPageView.lineWidthIsNeedAutoChange = YES;
+//    [self.view addSubview:navigationPageView];
+//    navigationPageView.frame = CGRectMake(0,300, [UIScreen mainScreen].bounds.size.width , 300);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

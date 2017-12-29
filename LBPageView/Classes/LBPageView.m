@@ -10,7 +10,7 @@
 
 #import "LBPageView.h"
 
-@interface LBPageView()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
+@interface LBPageView()<UIPageViewControllerDataSource,UIPageViewControllerDelegate,UIScrollViewDelegate>
 
 
 @property (assign , nonatomic) NSUInteger currentPageIndex;
@@ -52,7 +52,22 @@
     _pageViewController.delegate = self;
     _pageViewController.dataSource = self;
     [self addSubview:_pageViewController.view];
+    [self findScrollView:_pageViewController].delegate = self;
 }
+
+#pragma mark - scrollView delegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    [self pageViewDidEndDragging];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self pageViewDidEndDecelerate];
+}
+
+- (void)pageViewDidEndDragging{}
+
+- (void)pageViewDidEndDecelerate{}
+
 
 
 - (UIScrollView *)findScrollView:(UIPageViewController *)pageViewController{
@@ -92,6 +107,8 @@
         if([self findScrollView:_pageViewController].isDragging){
             [self pageViewDidScrollContentOffset:change];
         }
+       
+        
     }
 }
 - (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{

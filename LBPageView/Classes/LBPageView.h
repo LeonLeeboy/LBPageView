@@ -30,4 +30,7 @@
 
 - (void)pageViewAtIndex:(NSUInteger)index;
 
+- (void)pageViewDidEndDragging;
+- (void)pageViewDidEndDecelerate;
+
 @end
