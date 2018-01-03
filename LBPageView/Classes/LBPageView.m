@@ -112,7 +112,6 @@
     }
 }
 - (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic{
-    
 }
 
 - (void)scrollToViewControllerAtIndex:(NSUInteger)index{

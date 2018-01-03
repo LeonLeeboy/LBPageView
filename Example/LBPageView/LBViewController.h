@@ -6,8 +6,10 @@
 //  Copyright (c) 2017 j1103765636@iCloud.com. All rights reserved.
 //
 
-@import UIKit;
 
-@interface LBViewController : UIViewController
+#import "LBDemoViewController.h"
+
+
+@interface LBViewController : LBDemoViewController
 
 @end

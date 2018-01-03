@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C235D651FFB8B8D00729CCF /* LBDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C235D641FFB8B8D00729CCF /* LBDemoViewController.m */; };
 		4722FF0D58DAC9CB7E07CF28 /* Pods_LBPageView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5463E60DEC60882727BD3EB9 /* Pods_LBPageView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		075F286D64CDD4DE00C9117B /* Pods-LBPageView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBPageView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBPageView_Example/Pods-LBPageView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2C235D631FFB8B8D00729CCF /* LBDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBDemoViewController.h; sourceTree = "<group>"; };
+		2C235D641FFB8B8D00729CCF /* LBDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBDemoViewController.m; sourceTree = "<group>"; };
 		3DC3A503A3D4DA8E74456057 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4545F732116547CB339AA004 /* Pods_LBPageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBPageView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		545BBA0B978CDA1DF6C8FF5A /* Pods-LBPageView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBPageView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBPageView_Tests/Pods-LBPageView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2C235D631FFB8B8D00729CCF /* LBDemoViewController.h */,
+				2C235D641FFB8B8D00729CCF /* LBDemoViewController.m */,
 			);
 			name = "Example for LBPageView";
 			path = LBPageView;
@@ -406,6 +411,7 @@
 				6003F59E195388D20070C39A /* LBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* LBViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2C235D651FFB8B8D00729CCF /* LBDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
