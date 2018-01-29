@@ -8,6 +8,7 @@
 #import "LBNavigationPageView.h"
 #import "LBHeaderPageView.h"
 
+
 @interface LBNavigationPageView()<LBHeaderViewDelegate>
 
 @property (nonatomic , strong) NSArray *titlesArray;

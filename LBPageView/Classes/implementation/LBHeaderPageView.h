@@ -7,6 +7,7 @@
 //
 
 #import "LBPageView.h"
+#import "ILBHeaderPageViewProtocol.h"
 
 @interface LBHeaderButton : UIControl
 
@@ -41,7 +42,7 @@
 
 @property (assign , nonatomic) BOOL isNeedLineAnnimate;//to fix a little bug
 
-@property (weak , nonatomic) id <LBHeaderViewDelegate> delegate;
+@property (weak , nonatomic) id <LBHeaderViewDelegate> delegate; //代理
 
 + (instancetype)headerViewWithTitlesArray:(NSArray *)titlesArray withNavigation:(BOOL)flag;
 
@@ -51,15 +52,16 @@
 
 
 
-@interface LBHeaderPageView : LBPageView
+@interface LBHeaderPageView : LBPageView <ILBHeaderPageViewProtocol>
 
-@property (assign , nonatomic) BOOL lineWidthIsNeedAutoChange;
 
 /**
  直接用类方法初始化就行 直接搞定
  */
 @property (strong , nonatomic) UIColor *titleViewBackgroundColor;
 
-+ (instancetype)headerPageViewWithClassNamesArray:(NSArray *)classNamesArray titlesArray:(NSArray *)titlesArray;
+
+@property (assign , nonatomic) BOOL lineWidthIsNeedAutoChange;
+
 
 @end

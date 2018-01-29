@@ -15,6 +15,8 @@
 #import "LBPageView.h"
 #import "LBPageViewConst.h"
 #import "UIView+LBPageView.h"
+#import "ILBHeaderPageViewProtocol.h"
+#import "ILBNavigationPageViewProtocol.h"
 
 FOUNDATION_EXPORT double LBPageViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char LBPageViewVersionString[];

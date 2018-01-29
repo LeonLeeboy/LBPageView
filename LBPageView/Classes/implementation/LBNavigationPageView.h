@@ -6,11 +6,10 @@
 //
 
 #import <LBPageView/LBPageView.h>
+#import "ILBNavigationPageViewProtocol.h"
 
-@interface LBNavigationPageView : LBPageView
+@interface LBNavigationPageView : LBPageView <ILBNavigationPageViewProtocol>
 
 @property (assign , nonatomic) BOOL lineWidthIsNeedAutoChange;
-
-+ (instancetype)pageViewWithClassNamesArray:(NSArray *)classNamesArray titlesArray:(NSArray *)titlesArray ViewController:(UIViewController *)vc;
 
 @end
