@@ -10,6 +10,10 @@
 
 
 //---------------------------------------------------------------------------------------------------------------------
+
+/**
+ 头部的button， 例如首页，体育啥的
+ */
 @implementation LBHeaderButton
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -19,6 +23,10 @@
     return self;
 }
 
+
+/**
+ 初始化
+ */
 - (void)prepare{
     //ui
     UILabel *labTitle = [[UILabel alloc] init];
@@ -27,6 +35,7 @@
     [self addSubview:labTitle];
     self.labTitle = labTitle;
     self.selected = NO;
+    //data
 }
 
 - (void)layoutSubviews{
@@ -56,6 +65,10 @@
 
 //--------------------------------------------------------*************-------------------------------------------------------------
 
+
+/**
+ 头部存放button 的view
+ */
 @interface LBHeaderView ()
 
 @property (nonatomic , strong , readwrite) NSMutableArray<LBHeaderButton *> *buttonsArray;
