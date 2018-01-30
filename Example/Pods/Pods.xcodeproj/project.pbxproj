@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		087D9BBB292FFA7209928F22A9D0305B /* LBNavigationPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C03864CB419E997B2FD802B07C62A88 /* LBNavigationPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12994CB29795274CB82528863333009E /* LBPageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A091FB44E8402D838FAB792B58DAD8E4 /* LBPageView-dummy.m */; };
-		2E32DFBFBA912F7B619FA18CA7D54852 /* LBPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE606F579BB7A9CCCBB91E07D51881B /* LBPageView.m */; };
-		3FE013EFE762AF62CC770D59A58992FE /* LBHeaderPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC84301F0F58DCB6E3853E00F89FA39 /* LBHeaderPageView.m */; };
-		565EB78E06A500D80FCC0E4D5EB4CFAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		62A10FD7EAE535DD4AD93A57A6E3A591 /* LBNavigationPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC79325CC998BA9488D271C78DB2 /* LBNavigationPageView.m */; };
+		0764870D4AAA62C92C83012695884FEA /* LBHeaderPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAE2454D997249DED379499DCC5D0DF /* LBHeaderPageView.m */; };
+		0D5BC2B48FFF3C835408AB80C6AE4FBC /* LBNavigationPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62EF19C34ED5A1FC5C138FEFE6EDA3A2 /* LBNavigationPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA81D1E14B72BA5C389ED419F738D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		3BBB1FF14712D17FACAD087D2DF95AB0 /* LBPageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F491B41163F0FC36F061FB16C0F2 /* LBPageView-dummy.m */; };
+		65429DBB93CBF2C18C0066A8C220AF28 /* ILBPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4393F2A2F30E121AC6EFFAA21281678F /* ILBPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74EE0F30C4B32212EFD604EAC56C5B11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		8BEF326BE011614258317FC8BC9EF0B6 /* LBPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8727B972D5C59112D28DE2FDC56D35 /* LBPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99E2D343EF6AF24858E707AB7648102F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		7C2E0929EB6B70BE94F7D02BDC9D021B /* ILBNavigationPageViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4147DD9ECC197FBBB6060E7640B182B1 /* ILBNavigationPageViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82B88495C6291ECD62949DC090A6DCD5 /* ILBHeaderPageViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA45D22F66C67BF7C99B2743E4FE68EB /* ILBHeaderPageViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9707D18E8734531B1569E0A3A53BF887 /* LBHeaderPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C60DB18899BCB5085E6B849E932FD2 /* LBHeaderPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99E60C89C7744FE035B9BB6238B985E3 /* LBPageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A8FD80C7DA8D690AAC064F890023FD /* LBPageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E00B7DEE37D9DEB9A4DDF90FE15AED7 /* Pods-LBPageView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E63CF0906E9B94427785A708E1E65AB /* Pods-LBPageView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF72AD81BA7A9EAA9C2F4AB9805CE8C4 /* ILBHeaderPageViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F165C867BB2B6DF87FEAB8D714B50F /* ILBHeaderPageViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD52AF5818ACC62089D5E1501348323C /* LBPageViewConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6EA78AC69B8F52A9CD9EBBD8B55CE2 /* LBPageViewConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD60D6F14D51200DF43084A105E13158 /* LBNavigationPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F392D4E5E6FE9B5A803913A80E8D49 /* LBNavigationPageView.m */; };
+		B3C6D052B29BEDF0422EC47F61C3E368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B61D5E80C81A2364C435B46B6EF7F529 /* LBPageViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E2D822016BB7B2249D8AFB4372E2D /* LBPageViewConst.m */; };
 		B9216C4B57D92B206F72F3F9ADD42963 /* Pods-LBPageView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC23576ADD80C9A8AFDA1B8BCC6CB188 /* Pods-LBPageView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA2CC26EB735D4DBBD7430AB032B3F67 /* LBPageViewConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 8813B259B3C7A10A65BC91EAF4B02A7D /* LBPageViewConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6DDD5276281BB246AE8553CFD6C0860 /* LBHeaderPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF17BA228E01CF276A22A4CC63ECB2A8 /* LBHeaderPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7362A361B4199A09E203B1E8D2771ED /* LBPageViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD81DD963D51E4BEDA9926B912EC1C1 /* LBPageViewConst.m */; };
+		BFAF520AC7DFDC4104D7DD486C21D9CA /* LBPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 665255DB851DD04B0BDCE5DB6FE7D986 /* LBPageView.m */; };
 		CAA99946C3C4C593367C3149FF2AE326 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		CC6D671BC46494EA31D1832F0760CB64 /* Pods-LBPageView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0405DA7F704D1428FC7D6B4D70DA583 /* Pods-LBPageView_Example-dummy.m */; };
+		DB4501B7E0A9DA907926FFBEDEF53E4E /* LBPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DDB763CCCE44E92B55AE0EAB3AA348E /* LBPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0E866011DCFEC8A1838BE11AB26AD95 /* UIView+LBPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F14CD80BA88676D5843E7EA28738F33B /* UIView+LBPageView.m */; };
+		F638F3071FF7C1F1AF99B51864A4A5EC /* UIView+LBPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF4E805D3B31BD7C9BFED4DD385285A /* UIView+LBPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F65E757194C17DCA1F66CC3A06C710D0 /* Pods-LBPageView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EF764710F989ADA3CDF63E712E428C /* Pods-LBPageView_Tests-dummy.m */; };
-		F87EDE635BEA6514F937ADD0D849E94E /* ILBNavigationPageViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C07BEFCC9C4F4D670878A8CCBC550A /* ILBNavigationPageViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC9285796F45C9F3373C0B387F0B00B1 /* LBPageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 337D998DEFD29DAF220AECEB1E9CCF2A /* LBPageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,59 +37,69 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D831D5D1446E1CB698DDE3DD0F2DC4D7;
+			remoteGlobalIDString = F1018FB6643D226B2444003A3F869C9E;
 			remoteInfo = LBPageView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0203AF0B58C92B58B5164161C3EF75A2 /* LBPageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LBPageView.modulemap; sourceTree = "<group>"; };
+		05A8FD80C7DA8D690AAC064F890023FD /* LBPageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBPageView-umbrella.h"; sourceTree = "<group>"; };
+		05F392D4E5E6FE9B5A803913A80E8D49 /* LBNavigationPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBNavigationPageView.m; sourceTree = "<group>"; };
+		0982F491B41163F0FC36F061FB16C0F2 /* LBPageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBPageView-dummy.m"; sourceTree = "<group>"; };
+		179F0A598CF53D795F52A49DA2D7C58C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17DD9F23445A6E02F09EE346DF508D4B /* Pods-LBPageView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBPageView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2591D0C9C7B36C1A6626877EC5173A11 /* LBPageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBPageView.xcconfig; sourceTree = "<group>"; };
-		337D998DEFD29DAF220AECEB1E9CCF2A /* LBPageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBPageView-umbrella.h"; sourceTree = "<group>"; };
 		35AB0F898958D66CF7246A1D8156CB4E /* LBPageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LBPageView.framework; path = LBPageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF8181550F22C947943BB3095D519D /* Pods-LBPageView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LBPageView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D8727B972D5C59112D28DE2FDC56D35 /* LBPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBPageView.h; sourceTree = "<group>"; };
-		590307B1B1B5BCFD8061508B6A8F7022 /* LBPageViewConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBPageViewConst.m; sourceTree = "<group>"; };
+		4147DD9ECC197FBBB6060E7640B182B1 /* ILBNavigationPageViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ILBNavigationPageViewProtocol.h; sourceTree = "<group>"; };
+		4393F2A2F30E121AC6EFFAA21281678F /* ILBPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ILBPageView.h; sourceTree = "<group>"; };
+		4575D06C732D965970B105BCB373FEE0 /* LBPageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBPageView-prefix.pch"; sourceTree = "<group>"; };
+		48C60DB18899BCB5085E6B849E932FD2 /* LBHeaderPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBHeaderPageView.h; sourceTree = "<group>"; };
+		4D6EA78AC69B8F52A9CD9EBBD8B55CE2 /* LBPageViewConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBPageViewConst.h; sourceTree = "<group>"; };
 		5B0EC105E83C73E52613FD9197A43AF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E30E8C3DB7CF0F3C06710B1B95AAA83 /* Pods-LBPageView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBPageView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5E63CF0906E9B94427785A708E1E65AB /* Pods-LBPageView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LBPageView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		601E2D822016BB7B2249D8AFB4372E2D /* LBPageViewConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBPageViewConst.m; sourceTree = "<group>"; };
 		61BF873BB1B4064585D65162AFF8B440 /* Pods-LBPageView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBPageView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		62EF19C34ED5A1FC5C138FEFE6EDA3A2 /* LBNavigationPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBNavigationPageView.h; sourceTree = "<group>"; };
 		650DBB9DF5C6238412B8A9E085EB4C5A /* Pods-LBPageView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LBPageView_Example.modulemap"; sourceTree = "<group>"; };
-		6BD81DD963D51E4BEDA9926B912EC1C1 /* LBPageViewConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBPageViewConst.m; sourceTree = "<group>"; };
-		6DC84301F0F58DCB6E3853E00F89FA39 /* LBHeaderPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBHeaderPageView.m; sourceTree = "<group>"; };
+		665255DB851DD04B0BDCE5DB6FE7D986 /* LBPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBPageView.m; sourceTree = "<group>"; };
 		72EF764710F989ADA3CDF63E712E428C /* Pods-LBPageView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LBPageView_Tests-dummy.m"; sourceTree = "<group>"; };
 		7A2F8D30824BA7FBD2DB93C44595D3E7 /* Pods_LBPageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LBPageView_Example.framework; path = "Pods-LBPageView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84D7FC79325CC998BA9488D271C78DB2 /* LBNavigationPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBNavigationPageView.m; sourceTree = "<group>"; };
-		8813B259B3C7A10A65BC91EAF4B02A7D /* LBPageViewConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBPageViewConst.h; sourceTree = "<group>"; };
 		8AB86507830E4B81D17A168A8009A0B4 /* Pods-LBPageView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBPageView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8D330E08F0EF6554700878D1E58F789C /* Pods-LBPageView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LBPageView_Tests.modulemap"; sourceTree = "<group>"; };
 		90A52B33276478CE1F8E3F14022BC194 /* Pods-LBPageView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBPageView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		92F165C867BB2B6DF87FEAB8D714B50F /* ILBHeaderPageViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ILBHeaderPageViewProtocol.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94A11BF8DE0B363DFE48135A6878604F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C03864CB419E997B2FD802B07C62A88 /* LBNavigationPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBNavigationPageView.h; sourceTree = "<group>"; };
-		A091FB44E8402D838FAB792B58DAD8E4 /* LBPageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBPageView-dummy.m"; sourceTree = "<group>"; };
-		A1D3AFDEEBE215A098E7443D2C7AC9F6 /* LBPageViewConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBPageViewConst.h; sourceTree = "<group>"; };
+		9BF4E805D3B31BD7C9BFED4DD385285A /* UIView+LBPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+LBPageView.h"; sourceTree = "<group>"; };
+		9DDB763CCCE44E92B55AE0EAB3AA348E /* LBPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBPageView.h; sourceTree = "<group>"; };
 		A2E148DD020827B912D78292B2E42AFE /* Pods-LBPageView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBPageView_Tests-resources.sh"; sourceTree = "<group>"; };
 		A3DAAD48F3F437CB207592FCF19C1F70 /* Pods-LBPageView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBPageView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AC23576ADD80C9A8AFDA1B8BCC6CB188 /* Pods-LBPageView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LBPageView_Example-umbrella.h"; sourceTree = "<group>"; };
-		AF17BA228E01CF276A22A4CC63ECB2A8 /* LBHeaderPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LBHeaderPageView.h; sourceTree = "<group>"; };
 		B0405DA7F704D1428FC7D6B4D70DA583 /* Pods-LBPageView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LBPageView_Example-dummy.m"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C6CB28C43BDD0AE3FA32E9E8BA42D00A /* Pods_LBPageView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LBPageView_Tests.framework; path = "Pods-LBPageView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAE2454D997249DED379499DCC5D0DF /* LBHeaderPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBHeaderPageView.m; sourceTree = "<group>"; };
 		D0CCF980538AABDD050391C2BA2DDBEF /* Pods-LBPageView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBPageView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D139A227617B7346B690B5C28D26F7F4 /* LBPageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LBPageView.modulemap; sourceTree = "<group>"; };
 		D86BA1B5DEECF397CD3CDF7F261B76CF /* Pods-LBPageView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBPageView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DEE606F579BB7A9CCCBB91E07D51881B /* LBPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LBPageView.m; sourceTree = "<group>"; };
-		E4C07BEFCC9C4F4D670878A8CCBC550A /* ILBNavigationPageViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ILBNavigationPageViewProtocol.h; sourceTree = "<group>"; };
-		E74FD85EB5EA803DE230816836439916 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1644E577794FA3DC6E788FBFE931A4E /* LBPageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBPageView.xcconfig; sourceTree = "<group>"; };
 		F0552A09E783B7765390184030EF50E6 /* Pods-LBPageView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LBPageView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F332E8C348134AFB286C664AABB4F6B5 /* LBPageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBPageView-prefix.pch"; sourceTree = "<group>"; };
+		F14CD80BA88676D5843E7EA28738F33B /* UIView+LBPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBPageView.m"; sourceTree = "<group>"; };
+		FA45D22F66C67BF7C99B2743E4FE68EB /* ILBHeaderPageViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ILBHeaderPageViewProtocol.h; sourceTree = "<group>"; };
 		FBB0711F179200BB16886CD8E8E43368 /* Pods-LBPageView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LBPageView_Example-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1698B61723A0384A0915DC100221EC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C6D052B29BEDF0422EC47F61C3E368 /* Foundation.framework in Frameworks */,
+				1FA81D1E14B72BA5C389ED419F738D7D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D2089811FEDC5FBA545BED0A3A215D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,23 +116,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		720B4F2193722DFE510C7B353F991376 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99E2D343EF6AF24858E707AB7648102F /* Foundation.framework in Frameworks */,
-				565EB78E06A500D80FCC0E4D5EB4CFAB /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C072BC478B5353DFD9771E1D9FE27D8 /* category */ = {
+		409CA2E6EA2B99546A43FBD22699F0A3 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				A1D3AFDEEBE215A098E7443D2C7AC9F6 /* LBPageViewConst.h */,
-				590307B1B1B5BCFD8061508B6A8F7022 /* LBPageViewConst.m */,
+				9BF4E805D3B31BD7C9BFED4DD385285A /* UIView+LBPageView.h */,
+				F14CD80BA88676D5843E7EA28738F33B /* UIView+LBPageView.m */,
 			);
 			name = category;
 			path = LBPageView/Classes/category;
@@ -151,17 +155,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		48C7973447873621EB3D5C45B9D093E3 /* LBPageView */ = {
+		4A0FC441659FDE8EDD64CB1065511227 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C072BC478B5353DFD9771E1D9FE27D8 /* category */,
-				795816D2DB463C55E54440A4C704ECFC /* common */,
-				ECA2E14AB2A7472325AAC85EB1A6A2DB /* implementation */,
-				F1DE79763A3752818B8852C720F45727 /* interface */,
-				6D9DE435E41C360768C7EB7A98F7BC76 /* Support Files */,
+				179F0A598CF53D795F52A49DA2D7C58C /* Info.plist */,
+				D139A227617B7346B690B5C28D26F7F4 /* LBPageView.modulemap */,
+				E1644E577794FA3DC6E788FBFE931A4E /* LBPageView.xcconfig */,
+				0982F491B41163F0FC36F061FB16C0F2 /* LBPageView-dummy.m */,
+				4575D06C732D965970B105BCB373FEE0 /* LBPageView-prefix.pch */,
+				05A8FD80C7DA8D690AAC064F890023FD /* LBPageView-umbrella.h */,
 			);
-			name = LBPageView;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LBPageView";
 			sourceTree = "<group>";
 		};
 		60E1E04B87BBB06A285710027265088F /* Products */ = {
@@ -177,23 +182,9 @@
 		68D28049051211B2E56C1A53C89BEA8B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48C7973447873621EB3D5C45B9D093E3 /* LBPageView */,
+				BDC60B8FF762891C30E477B353BA038A /* LBPageView */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		6D9DE435E41C360768C7EB7A98F7BC76 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E74FD85EB5EA803DE230816836439916 /* Info.plist */,
-				0203AF0B58C92B58B5164161C3EF75A2 /* LBPageView.modulemap */,
-				2591D0C9C7B36C1A6626877EC5173A11 /* LBPageView.xcconfig */,
-				A091FB44E8402D838FAB792B58DAD8E4 /* LBPageView-dummy.m */,
-				F332E8C348134AFB286C664AABB4F6B5 /* LBPageView-prefix.pch */,
-				337D998DEFD29DAF220AECEB1E9CCF2A /* LBPageView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LBPageView";
 			sourceTree = "<group>";
 		};
 		6E0BAD1CA3604784A5200B13BDA91DC8 /* Pods-LBPageView_Example */ = {
@@ -214,16 +205,6 @@
 			path = "Target Support Files/Pods-LBPageView_Example";
 			sourceTree = "<group>";
 		};
-		795816D2DB463C55E54440A4C704ECFC /* common */ = {
-			isa = PBXGroup;
-			children = (
-				8813B259B3C7A10A65BC91EAF4B02A7D /* LBPageViewConst.h */,
-				6BD81DD963D51E4BEDA9926B912EC1C1 /* LBPageViewConst.m */,
-			);
-			name = common;
-			path = LBPageView/Classes/common;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +214,15 @@
 				60E1E04B87BBB06A285710027265088F /* Products */,
 				41B0FE470C985EC0330650AD2EEA66F4 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8DBD2E9FC30F123CE738A8D38DB4C195 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				4393F2A2F30E121AC6EFFAA21281678F /* ILBPageView.h */,
+			);
+			name = basic;
+			path = basic;
 			sourceTree = "<group>";
 		};
 		8F5DA320EEB6385A859591735D0973D2 /* Pods-LBPageView_Tests */ = {
@@ -253,25 +243,58 @@
 			path = "Target Support Files/Pods-LBPageView_Tests";
 			sourceTree = "<group>";
 		};
-		ECA2E14AB2A7472325AAC85EB1A6A2DB /* implementation */ = {
+		A21C250C1BC01F9CB66C26F2C452F1B4 /* implementation */ = {
 			isa = PBXGroup;
 			children = (
-				AF17BA228E01CF276A22A4CC63ECB2A8 /* LBHeaderPageView.h */,
-				6DC84301F0F58DCB6E3853E00F89FA39 /* LBHeaderPageView.m */,
-				9C03864CB419E997B2FD802B07C62A88 /* LBNavigationPageView.h */,
-				84D7FC79325CC998BA9488D271C78DB2 /* LBNavigationPageView.m */,
-				3D8727B972D5C59112D28DE2FDC56D35 /* LBPageView.h */,
-				DEE606F579BB7A9CCCBB91E07D51881B /* LBPageView.m */,
+				48C60DB18899BCB5085E6B849E932FD2 /* LBHeaderPageView.h */,
+				CAAE2454D997249DED379499DCC5D0DF /* LBHeaderPageView.m */,
+				62EF19C34ED5A1FC5C138FEFE6EDA3A2 /* LBNavigationPageView.h */,
+				05F392D4E5E6FE9B5A803913A80E8D49 /* LBNavigationPageView.m */,
+				A892063E6301F3FCC152489C0C7317CE /* basic */,
 			);
 			name = implementation;
 			path = LBPageView/Classes/implementation;
 			sourceTree = "<group>";
 		};
-		F1DE79763A3752818B8852C720F45727 /* interface */ = {
+		A892063E6301F3FCC152489C0C7317CE /* basic */ = {
 			isa = PBXGroup;
 			children = (
-				92F165C867BB2B6DF87FEAB8D714B50F /* ILBHeaderPageViewProtocol.h */,
-				E4C07BEFCC9C4F4D670878A8CCBC550A /* ILBNavigationPageViewProtocol.h */,
+				9DDB763CCCE44E92B55AE0EAB3AA348E /* LBPageView.h */,
+				665255DB851DD04B0BDCE5DB6FE7D986 /* LBPageView.m */,
+			);
+			name = basic;
+			path = basic;
+			sourceTree = "<group>";
+		};
+		B6BCFDCD364C97E6DEFD4B1D56C61916 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4D6EA78AC69B8F52A9CD9EBBD8B55CE2 /* LBPageViewConst.h */,
+				601E2D822016BB7B2249D8AFB4372E2D /* LBPageViewConst.m */,
+			);
+			name = common;
+			path = LBPageView/Classes/common;
+			sourceTree = "<group>";
+		};
+		BDC60B8FF762891C30E477B353BA038A /* LBPageView */ = {
+			isa = PBXGroup;
+			children = (
+				409CA2E6EA2B99546A43FBD22699F0A3 /* category */,
+				B6BCFDCD364C97E6DEFD4B1D56C61916 /* common */,
+				A21C250C1BC01F9CB66C26F2C452F1B4 /* implementation */,
+				D75729B29F7E66B2EF097DF9FAC98C74 /* interface */,
+				4A0FC441659FDE8EDD64CB1065511227 /* Support Files */,
+			);
+			name = LBPageView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D75729B29F7E66B2EF097DF9FAC98C74 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				FA45D22F66C67BF7C99B2743E4FE68EB /* ILBHeaderPageViewProtocol.h */,
+				4147DD9ECC197FBBB6060E7640B182B1 /* ILBNavigationPageViewProtocol.h */,
+				8DBD2E9FC30F123CE738A8D38DB4C195 /* basic */,
 			);
 			name = interface;
 			path = LBPageView/Classes/interface;
@@ -288,18 +311,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C21E6A7E950652C31017C657A5F9BE64 /* Headers */ = {
+		92E0F67EDCEB768D42A90ECC239E9F78 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF72AD81BA7A9EAA9C2F4AB9805CE8C4 /* ILBHeaderPageViewProtocol.h in Headers */,
-				F87EDE635BEA6514F937ADD0D849E94E /* ILBNavigationPageViewProtocol.h in Headers */,
-				C6DDD5276281BB246AE8553CFD6C0860 /* LBHeaderPageView.h in Headers */,
-				087D9BBB292FFA7209928F22A9D0305B /* LBNavigationPageView.h in Headers */,
-				FC9285796F45C9F3373C0B387F0B00B1 /* LBPageView-umbrella.h in Headers */,
-				8BEF326BE011614258317FC8BC9EF0B6 /* LBPageView.h in Headers */,
-				BA2CC26EB735D4DBBD7430AB032B3F67 /* LBPageViewConst.h in Headers */,
-				BA2CC26EB735D4DBBD7430AB032B3F67 /* LBPageViewConst.h in Headers */,
+				82B88495C6291ECD62949DC090A6DCD5 /* ILBHeaderPageViewProtocol.h in Headers */,
+				7C2E0929EB6B70BE94F7D02BDC9D021B /* ILBNavigationPageViewProtocol.h in Headers */,
+				65429DBB93CBF2C18C0066A8C220AF28 /* ILBPageView.h in Headers */,
+				9707D18E8734531B1569E0A3A53BF887 /* LBHeaderPageView.h in Headers */,
+				0D5BC2B48FFF3C835408AB80C6AE4FBC /* LBNavigationPageView.h in Headers */,
+				99E60C89C7744FE035B9BB6238B985E3 /* LBPageView-umbrella.h in Headers */,
+				DB4501B7E0A9DA907926FFBEDEF53E4E /* LBPageView.h in Headers */,
+				AD52AF5818ACC62089D5E1501348323C /* LBPageViewConst.h in Headers */,
+				F638F3071FF7C1F1AF99B51864A4A5EC /* UIView+LBPageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,13 +355,13 @@
 			productReference = C6CB28C43BDD0AE3FA32E9E8BA42D00A /* Pods_LBPageView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D831D5D1446E1CB698DDE3DD0F2DC4D7 /* LBPageView */ = {
+		F1018FB6643D226B2444003A3F869C9E /* LBPageView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E4E3EA144EDE5657F895474C681FF22 /* Build configuration list for PBXNativeTarget "LBPageView" */;
+			buildConfigurationList = 547EB6DD08F1ED721E798E90E2DF9953 /* Build configuration list for PBXNativeTarget "LBPageView" */;
 			buildPhases = (
-				82AAD959843F0A01F1602A206E41115B /* Sources */,
-				720B4F2193722DFE510C7B353F991376 /* Frameworks */,
-				C21E6A7E950652C31017C657A5F9BE64 /* Headers */,
+				06FC8AF15FC2ED488C3E9C92EECDEC36 /* Sources */,
+				1698B61723A0384A0915DC100221EC0B /* Frameworks */,
+				92E0F67EDCEB768D42A90ECC239E9F78 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -387,7 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D831D5D1446E1CB698DDE3DD0F2DC4D7 /* LBPageView */,
+				F1018FB6643D226B2444003A3F869C9E /* LBPageView */,
 				F1A1FD9CE23F858309A514E421100B76 /* Pods-LBPageView_Example */,
 				8CCD2EA82037C2199145983E63A7E1D2 /* Pods-LBPageView_Tests */,
 			);
@@ -395,24 +419,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		06FC8AF15FC2ED488C3E9C92EECDEC36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0764870D4AAA62C92C83012695884FEA /* LBHeaderPageView.m in Sources */,
+				AD60D6F14D51200DF43084A105E13158 /* LBNavigationPageView.m in Sources */,
+				3BBB1FF14712D17FACAD087D2DF95AB0 /* LBPageView-dummy.m in Sources */,
+				BFAF520AC7DFDC4104D7DD486C21D9CA /* LBPageView.m in Sources */,
+				B61D5E80C81A2364C435B46B6EF7F529 /* LBPageViewConst.m in Sources */,
+				F0E866011DCFEC8A1838BE11AB26AD95 /* UIView+LBPageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E00A403BB72A69563901A5BD9EA85C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CC6D671BC46494EA31D1832F0760CB64 /* Pods-LBPageView_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82AAD959843F0A01F1602A206E41115B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FE013EFE762AF62CC770D59A58992FE /* LBHeaderPageView.m in Sources */,
-				62A10FD7EAE535DD4AD93A57A6E3A591 /* LBNavigationPageView.m in Sources */,
-				12994CB29795274CB82528863333009E /* LBPageView-dummy.m in Sources */,
-				2E32DFBFBA912F7B619FA18CA7D54852 /* LBPageView.m in Sources */,
-				C7362A361B4199A09E203B1E8D2771ED /* LBPageViewConst.m in Sources */,
-				C7362A361B4199A09E203B1E8D2771ED /* LBPageViewConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +454,7 @@
 		5A6FA37A85769E2A06F04083B1FCCAD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LBPageView;
-			target = D831D5D1446E1CB698DDE3DD0F2DC4D7 /* LBPageView */;
+			target = F1018FB6643D226B2444003A3F869C9E /* LBPageView */;
 			targetProxy = 31286016E7F602FA1F8A05C445620A6A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -493,65 +517,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		33F25471B37E247EFC49B71113036B63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2591D0C9C7B36C1A6626877EC5173A11 /* LBPageView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LBPageView/LBPageView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LBPageView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LBPageView/LBPageView.modulemap";
-				PRODUCT_NAME = LBPageView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3AD6DF666FFB47C267E7E1FF7AC52ECE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2591D0C9C7B36C1A6626877EC5173A11 /* LBPageView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LBPageView/LBPageView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LBPageView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LBPageView/LBPageView.modulemap";
-				PRODUCT_NAME = LBPageView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -676,6 +641,35 @@
 			};
 			name = Release;
 		};
+		8FF668792CF546D0BC7862EF2F7C02FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1644E577794FA3DC6E788FBFE931A4E /* LBPageView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBPageView/LBPageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBPageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LBPageView/LBPageView.modulemap";
+				PRODUCT_NAME = LBPageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A4F77707D0FAE01992E33D4B88262945 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3DAAD48F3F437CB207592FCF19C1F70 /* Pods-LBPageView_Example.debug.xcconfig */;
@@ -740,6 +734,36 @@
 			};
 			name = Debug;
 		};
+		F77E8A34DE0FD53AC04353CEB24F8ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1644E577794FA3DC6E788FBFE931A4E /* LBPageView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBPageView/LBPageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBPageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LBPageView/LBPageView.modulemap";
+				PRODUCT_NAME = LBPageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,11 +776,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E4E3EA144EDE5657F895474C681FF22 /* Build configuration list for PBXNativeTarget "LBPageView" */ = {
+		547EB6DD08F1ED721E798E90E2DF9953 /* Build configuration list for PBXNativeTarget "LBPageView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AD6DF666FFB47C267E7E1FF7AC52ECE /* Debug */,
-				33F25471B37E247EFC49B71113036B63 /* Release */,
+				8FF668792CF546D0BC7862EF2F7C02FC /* Debug */,
+				F77E8A34DE0FD53AC04353CEB24F8ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
