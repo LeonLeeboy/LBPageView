@@ -10,11 +10,11 @@
 #endif
 #endif
 
+#import "LBPageViewConst.h"
+#import "LBPageViewConst.h"
 #import "LBHeaderPageView.h"
 #import "LBNavigationPageView.h"
 #import "LBPageView.h"
-#import "LBPageViewConst.h"
-#import "UIView+LBPageView.h"
 #import "ILBHeaderPageViewProtocol.h"
 #import "ILBNavigationPageViewProtocol.h"
 
