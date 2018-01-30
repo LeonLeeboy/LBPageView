@@ -12,7 +12,7 @@
 #import "ILBPageView.h"
 
 
-@interface LBPageView : UIView
+@interface LBPageView : UIView <ILBPageView>
 
 @property (nonatomic , strong) NSArray *classNameArray;
 
