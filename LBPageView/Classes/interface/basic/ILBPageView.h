@@ -9,4 +9,21 @@
 
 @protocol ILBPageView <NSObject>
 
+
+@required
++ (instancetype)pageViewWithControllerNamesArray:(NSArray *)classNameArray;
+
+- (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic;
+
+- (void)scrollToViewControllerAtIndex:(NSUInteger)index;
+
+- (void)placeSubViews;
+
+- (void)prepare;
+
+- (void)pageViewAtIndex:(NSUInteger)index; //for subClass
+
+- (void)pageViewDidEndDragging; //for subClass
+- (void)pageViewDidEndDecelerate;//for subClass
+
 @end

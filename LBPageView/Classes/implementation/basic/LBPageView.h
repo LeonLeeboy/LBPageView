@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+LBPageView.h"
 #import "LBPageViewConst.h"
+#import "ILBPageView.h"
 
 
 @interface LBPageView : UIView
@@ -17,20 +18,5 @@
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 
-
-+ (instancetype)pageViewWithControllerNamesArray:(NSArray *)classNameArray;
-
-- (void)pageViewDidScrollContentOffset:(NSDictionary *)infoDic;
-
-- (void)scrollToViewControllerAtIndex:(NSUInteger)index;
-
-- (void)placeSubViews;
-
-- (void)prepare;
-
-- (void)pageViewAtIndex:(NSUInteger)index;
-
-- (void)pageViewDidEndDragging;
-- (void)pageViewDidEndDecelerate;
 
 @end
